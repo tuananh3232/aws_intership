@@ -23,17 +23,17 @@ pre: " <b> 1.6. </b> "
 ### Week 6 Achievements:
 
 * **Summary:**  
-  * This week I learned the AWS storage ecosystem including S3, Glacier, Backup, Storage Gateway, and file systems. I focused heavily on hands-on labs to understand data management, backup–restore, and AWS storage mechanisms.
+  * This week, I gained a solid understanding of the AWS storage ecosystem, including S3, Glacier, AWS Backup, Storage Gateway, and various file systems. I focused heavily on hands-on practice to understand how data management, backup–restore workflows, and storage mechanisms operate in AWS.
 
 * **Theory learned:**  
-  * S3 Storage Class, Access Point, CORS  
-  * Glacier, lifecycle, backup concepts  
-  * Storage Gateway and file system architecture  
-  * VM import/export  
+  * Concepts of S3 Storage Classes, Access Points, and CORS.
+  * Knowledge about Glacier, lifecycle policies, and AWS backup concepts.
+  * Architecture and operation of AWS Storage Gateway and AWS file system services.
+  * Processes for importing/exporting virtual machines to AWS.
 
 * **Hands-on labs:**  
   * Backup & restore  
   * Import on-prem VM into AWS  
   * Create Multi-AZ file system  
-  * Create static website, CloudFront, versioning, replication  
-  * Practice Storage Gateway – create file share, connect, test data transfer between on-prem and AWS  
+  * Built a static website using S3, integrated CloudFront, enabled versioning and replication.
+  * Worked with Storage Gateway: created a file share, connected from on-prem, and tested data transfer between on-prem and AWS.

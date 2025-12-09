@@ -5,6 +5,8 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
+**[Proposal Template Taskhub](static/files/Proposal_Template_Taskhub.docx)**
+
 # TaskHub - Nền tảng quản lý nhiệm vụ và tiến độ theo mô hình DevSecOps trên AWS
 
 ### **1. Tóm tắt điều hành**

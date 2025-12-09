@@ -98,5 +98,5 @@ The workshop ended with a stronger sense of responsibility, motivating me to app
 ---
 
 ### Photos
-![event5](/images/event-image5.png)
-![event6](/images/event-image6.png)
+![Event photo](/images/4-EventParticipated/4.5-Event5/event51.png)
+![Event photo](/images/4-EventParticipated/4.5-Event5/event52.png)

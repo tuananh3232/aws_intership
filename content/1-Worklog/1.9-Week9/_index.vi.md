@@ -10,40 +10,47 @@ pre: " <b> 1.9. </b> "
 
 ### Mục tiêu tuần 9:
 
-* Tìm hiểu tổng quan kiến trúc Serverless và các thành phần chính: API Gateway, Lambda, DynamoDB.
-* Thiết kế kiến trúc tổng thể cho ứng dụng: backend, frontend, xác thực, bảo mật và tích hợp.
-* Nghiên cứu lớp bảo mật (Edge & Security): CloudFront, Route 53, WAF.
-* Tìm hiểu hệ thống xác thực với Amazon Cognito và cách cấp token cho API.
-* Phân tích cách triển khai CI/CD với CodePipeline, CodeBuild, GitLab và IaC (CloudFormation).
-* Tìm hiểu hệ thống quan sát/giám sát: CloudWatch, X-Ray, SNS.
+Hiểu kiến trúc AWS Serverless và xác định các thành phần cần quản lý ở tầng hạ tầng.
+
+Thiết kế kiến trúc triển khai ứng dụng (Backend, Frontend, Auth, Edge Security) ở góc nhìn DevOps.
+
+Tìm hiểu và thiết kế lớp bảo mật: CloudFront, Route 53, AWS WAF, API protection.
+
+Nghiên cứu Cognito để tích hợp vào Authentication/Authorization pipeline.
+
+Nắm quy trình CI/CD với CodePipeline, CodeBuild, GitLab Runner và hạ tầng IaC với CloudFormation.
+
+Thiết lập cơ chế giám sát – quan sát: CloudWatch Log/Metrics, X-Ray, SNS Alerts.
   
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                  | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | ---------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------- |
-| 2   | - Tìm hiểu kiến trúc Serverless <br> - API Gateway, Lambda, DynamoDB & cơ chế tích hợp                     | 03/11/2025   | 03/11/2025      |
-| 3   | - Thiết kế kiến trúc tổng thể (BE + FE + Auth + Edge) <br> - Vẽ sơ đồ kiến trúc & luồng request            | 04/11/2025   | 04/11/2025      |
+| 2   | - Phân tích kiến trúc Serverless                     | 03/11/2025   | 03/11/2025      |
+|     | - Cách vận hành API Gateway – Lambda – DynamoDB từ góc nhìn DevOps                     | 03/11/2025   | 03/11/2025      |
+| 3   | - Thiết kế kiến trúc tổng thể (Infrastructure Level)                     | 03/11/2025   | 03/11/2025      |
+|     | - Xác định deployment flow & môi trường chạy           | 04/11/2025   | 04/11/2025      |
 |     |
-| 4   | - Tìm hiểu CloudFront, Route 53, WAF <br> - Thiết kế lớp bảo mật trước API Gateway                         | 05/11/2025   | 05/11/2025      |                |
-| 5   | - Tìm hiểu Cognito (User Pool, Token) <br> - Phân tích cách API Gateway validate JWT token                 | 06/11/2025   | 06/11/2025      |                |
-| 6   | - Tìm hiểu CI/CD: CloudFormation, CodePipeline, CodeBuild <br> - Hệ thống quan sát: CloudWatch, X-Ray, SNS | 07/11/2025   | 07/11/2025      |                |
+| 4   | - Thiết kế lớp bảo mật Edge (CloudFront + WAF + Route 53)                         | 05/11/2025   | 05/11/2025      |                |
+| 5   | - Tìm hiểu cơ chế Cognito Tokens                 | 06/11/2025   | 06/11/2025      |                |
+| 6   | - Thiết kế CI/CD Pipeline (GitLab → AWS) | 07/11/2025   | 07/11/2025      |                |
 
 
 ### Kết quả đạt được tuần 9:
 
 * Tổng quát:
-  * Trong tuần này tôi tập trung hiểu và thiết kế kiến trúc Serverless cho ứng dụng. Tôi đã nắm rõ luồng hoạt động của API Gateway – Lambda – DynamoDB, đồng thời nghiên cứu lớp bảo mật bằng CloudFront/WAF và hệ thống xác thực bằng Cognito. Tôi cũng nắm được quy trình CI/CD và cơ chế logging/monitoring để chuẩn bị cho các tuần code tiếp theo.
-  
-* Lý thuyết đã học:
-  * Kiến trúc Serverless, nguyên tắc pay-per-use và autoscaling.
-  * API Gateway REST API, Lambda integration, DynamoDB table workflow.
-  * CloudFront + WAF + Route 53 để bảo vệ API.
-  * Cognito User Pool & Token (ID/Access), JWT flow qua API Gateway authorizer.
-  * CI/CD với CodePipeline + CodeBuild + CloudFormation.
-  * CloudWatch logs/metrics, SNS alert, tracing bằng X-Ray.
+  * Tuần này tập trung vào việc phân tích và thiết kế hạ tầng Serverless, đảm bảo các thành phần ứng dụng có thể được quản lý, giám sát và triển khai tự động. Tôi đã hiểu rõ cách API Gateway, Lambda và DynamoDB phối hợp từ góc độ DevOps: scaling, logging, retry, throttling, bảo mật và CI/CD pipeline.
+    
+  * Lý thuyết đã học:
+    * Mô hình event-driven, autoscaling tự động.  
+    * Hiểu trách nhiệm DevOps: logging, tracing, bảo mật, structure IAM.
+    * Cách DevOps quản lý version, deployment, stage variables. 
+    * CloudFront → WAF → API Gateway cách bảo vệ API.
+    * CodePipeline + CodeBuild + CloudFormation.
 
-* Thực hành / Sản phẩm:
-  * Sơ đồ kiến trúc tổng thể ứng dụng (BE – FE – Auth – Edge).
-  * Luồng request từ client -> CloudFront -> API Gateway -> Lambda -> DynamoDB.
-  * Diagram bảo mật: CDN, DNS, WAF, throttling & protection tại API Gateway.
-  * Phác thảo pipeline tự động triển khai bằng CloudFormation & CodePipeline.
-  * Thiết kế flow xác thực Cognito -> API Gateway JWT Authorizer.
+
+  * Thực hành / Sản phẩm:
+    * Thiết kế sơ đồ kiến trúc hạ tầng Serverless đầy đủ.
+    * Xây dựng diagram flow request từ FE → CloudFront → WAF → API Gateway → Lambda → DynamoDB.
+    * Vẽ pipeline deploy: GitLab CI/CD → AWS CLI → Lambda
+                          GitLab → S3 + CloudFront
+    * Thiết kế DevOps Auth flow: Cognito → Authorizer → API Gateway.

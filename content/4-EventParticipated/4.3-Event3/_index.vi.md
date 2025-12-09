@@ -81,9 +81,5 @@ Kết thúc workshop, em cảm thấy tự tin hơn với con đường theo đu
 ---
 
 ### Một số hình ảnh tại sự kiện
-![anh1 event]()
-![anh2 event](/images/event-image2.png)
-![anh2 event](/images/event-image2.png)
-![anh2 event](/images/event-image2.png)
-![anh2 event](/images/event-image2.png)
-![anh2 event](/images/event-image2.png)
+![Event photo](/images/4-EventParticipated/4.3-Event3/event31.png)
+![Event photo](/images/4-EventParticipated/4.3-Event3/event32.png)

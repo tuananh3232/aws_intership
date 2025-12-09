@@ -1,58 +1,76 @@
 ---
 title: "Worklog Tuần 12"
-date: "2025-11-10"
-weight: 2
+date: "2025-11-28"
+weight: 12"
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+### Mục tiêu tuần 12 (Nền tảng DevOps trước khi triển khai AWS)
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+Sau khi hoàn thành backend local ở tuần 10 và tích hợp FE–BE ở tuần 11,  
+tuần 12 tập trung xây dựng kiến thức nền tảng AWS để chuẩn bị cho các tuần triển khai thực tế (Lambda, API Gateway, DynamoDB, CloudFront).
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+Mục tiêu gồm:
 
+- Hiểu các dịch vụ AWS cốt lõi sẽ dùng trong triển khai TaskHub.
+- Thiết lập tài khoản AWS Free Tier + IAM đúng chuẩn DevOps.
+- Làm quen giao diện AWS Console & AWS CLI.
+- Học kiến thức compute/networking cơ bản để hiểu kiến trúc cloud trước khi chuyển sang serverless.
 
-### Kết quả đạt được tuần 12:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Các công việc triển khai trong tuần
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+| Thứ | Công việc                                                                                                                 | Bắt đầu    | Hoàn thành |
+| --- | ------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- |
+| 2   | - Onboarding cùng thành viên FCJ <br> - Nắm quy định và workflow DevOps trong dự án                                       | 08/11/2025 | 08/11/2025 |
+| 3   | - Học nhóm dịch vụ AWS: Compute, Storage, Networking, Database, IAM <br> - Liên kết các dịch vụ này với kiến trúc TaskHub | 08/12/2025 | 08/12/2025 |
+| 4   | - Tạo tài khoản AWS Free Tier <br> - Cài đặt & cấu hình AWS CLI <br> - Thực hành truy vấn tài nguyên qua CLI              | 08/13/2025 | 08/13/2025 |
+| 5   | - Học EC2: AMI, Instance Types, EBS, Security Groups, Elastic IP <br> - Nắm các khái niệm networking cloud (VPC/Subnets)  | 08/14/2025 | 08/15/2025 |
+| 6   | - Thực hành: Launch EC2, SSH kết nối, attach EBS volume <br> - So sánh quy trình Console vs CLI dưới góc nhìn DevOps      | 08/15/2025 | 08/15/2025 |
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+---
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+### Kết quả đạt được tuần 12
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### Tổng quát
+Tiếp nối tuần 10 (xây dựng backend local) và tuần 11 (FE–BE integration),  
+tuần 12 giúp tôi nắm vững kiến thức AWS nền tảng để sẵn sàng triển khai backend lên AWS ở tuần 13.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+Tôi đã hiểu cách AWS tổ chức dịch vụ, cách DevOps vận hành tài nguyên qua Console/CLI,  
+và chuẩn bị môi trường đầy đủ để bước vào giai đoạn deploy thực tế.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+---
 
+### Lý thuyết đã học
 
+- **Kiến thức AWS cơ bản dành cho DevOps**
+  - Compute, Storage, Networking, Database, IAM.
+  - Liên hệ EC2/VPC với kiến trúc serverless (Lambda, API Gateway).
+
+- **Thiết lập tài khoản & IAM**
+  - Tạo tài khoản Free Tier.
+  - Cấu hình IAM user + Access Key/Secret Key.
+  - Thiết lập region mặc định cho AWS CLI.
+
+- **Sử dụng AWS CLI**
+  - Kiểm tra cấu hình tài khoản.
+  - Liệt kê region, dịch vụ, thông tin EC2.
+  - Tạo và quản lý key pair.
+  - Làm quen workflow DevOps qua CLI.
+
+- **Thực hành EC2**
+  - Launch EC2 instance.
+  - SSH vào máy ảo.
+  - Gắn & quản lý EBS volume.
+  - Hiểu vòng đời compute trong cloud trước khi chuyển sang serverless.
+
+---
+
+### Thực hành / Sản phẩm
+
+- Hoàn chỉnh tài khoản AWS + IAM cho DevOps.
+- AWS CLI sẵn sàng dùng cho pipeline triển khai.
+- Thực hành EC2 để hiểu compute trước khi làm Lambda.
+- Bộ ghi chú nền tảng chuẩn bị cho triển khai tuần 13.

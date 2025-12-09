@@ -26,19 +26,22 @@ pre: " <b> 1.6. </b> "
 
 ### Kết quả đạt được tuần 6:
 * Tổng quát: 
-  * Trong tuần này tôi đã nắm được hệ sinh thái lưu trữ của AWS như S3, Glacier, Backup, Storage Gateway và các file system. Tập trung thực hành nhiều để hiểu cách quản lý dữ liệu, backup–restore và các cơ chế lưu trữ của AWS.
+  * Trong tuần này, tôi đã nắm được tổng quan về hệ sinh thái lưu trữ của AWS, bao gồm S3, Glacier, AWS Backup, Storage Gateway và các loại file system. Tôi tập trung vào việc thực hành để hiểu rõ cách quản lý dữ liệu, cơ chế backup–restore và các mô hình lưu trữ phổ biến trên AWS.  
   
 
 * Lý thuyết đã học:
-  * Khái niệm về S3 Storage Class, Access Point, CORS
-  * Học về Glacier, lifecycle, backup concepts
-  * Storage Gateway, file system kiến trúc
-  * Import/export máy ảo
+  * Khái niệm về S3 Storage Classes, Access Point, và CORS configuration.
+
+  * Tìm hiểu về Glacier, lifecycle policy và các khái niệm liên quan đến AWS Backup.
+
+ * Kiến trúc và cơ chế hoạt động của AWS Storage Gateway và các loại file system trên AWS.
+
+ * Cơ chế import/export máy ảo lên AWS.
 
   
 * Thực hành với bài lab:
   * Backup & restore
   * Import máy ảo on-prem lên AWS
   * Tạo file system Multi-AZ
-  * Tạo static website, CloudFront, versioning, replication
-  * Thực hành Storage Gateway – tạo file share, Kết nối thử, kiểm tra truyền dữ liệu giữa on-prem và AWS
+  * Xây dựng static website bằng S3, tích hợp CloudFront, bật versioning và replication.
+  * Thực hành với Storage Gateway: tạo file share, kết nối thử và kiểm tra truyền dữ liệu giữa on-prem và AWS.

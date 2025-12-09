@@ -73,4 +73,4 @@ Buổi sinh hoạt giúp em nhận ra rằng trở thành developer giỏi trong
 ---
 
 ### Một số hình ảnh khi tham gia sự kiện
-![anh7 event](/images/event-image7.png)
+![Event photo](/images/4-EventParticipated/4.2-Event2/event2.png)

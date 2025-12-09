@@ -2,10 +2,10 @@
 title: "Proposal"
 date: "2025-12-09"
 weight: 2
-chapter: false
+chapter: false 
 pre: " <b> 2. </b> "
 ---
-
+**[Proposal Template Taskhub](static/files/Proposal_Template_Taskhub.docx)**
 
 # TaskHub - Task and Progress Management Platform following the DevSecOps Model on AWS
 

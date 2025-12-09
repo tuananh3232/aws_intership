@@ -78,4 +78,4 @@ This session encouraged me to be proactive in mastering AI tools and to integrat
 ---
 
 ### Photos
-![event7](/images/event-image7.png)
+![Event photo](/images/4-EventParticipated/4.2-Event2/event2.png)

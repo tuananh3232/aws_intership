@@ -84,5 +84,5 @@ Các case study từ VNG và AWS giúp em hiểu rõ tầm quan trọng của mo
 ---
 
 ### Hình Ảnh
-![event3](/images/event-image3.png)
-![event4](/images/event-image4.png)
+![Event photo](/images/4-EventParticipated/4.4-Event4/event41.png)
+![Event photo](/images/4-EventParticipated/4.4-Event4/event42.png)

@@ -22,10 +22,10 @@ pre: " <b> 1. </b> "
 
 **Week 8:** [Database Services, ETL (Kinesis/Glue/Athena), DMS Migration.](1.8-week8/)
 
-**Week 9:** [Workshop – Designing system architecture on AWS (Architecture Design).](1.9-week9/)
+**Week 9:** [Designing the overall Serverless system architecture: API Gateway, Lambda, DynamoDB, CloudFront, WAF, Cognito, CI/CD pipeline.](1.9-week9/)
 
-**Week 10:** [Workshop – Building Database + Backend + Frontend.](1.10-week10/)
+**Week 10:** [Designing the overall Serverless system architecture: API Gateway, Lambda, DynamoDB, CloudFront, WAF, Cognito, CI/CD pipeline.](1.10-week10/)
 
-**Week 11:** [Workshop – Completing Frontend + Deploying the entire system.](1.11-week11/)
+**Week 11:** [Completing UI, integrating APIs, and preparing for AWS deployment.](1.11-week11/)
 
-**Week 12:** [Workshop – Testing, optimizing & writing the final project report.](1.12-week12/)
+**Week 12:** [Learning AWS Console, AWS CLI, IAM, EC2, and cloud fundamentals before deploying the system.](1.12-week12/)

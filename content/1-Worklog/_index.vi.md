@@ -24,10 +24,10 @@ pre: " <b> 1. </b> "
 
 **Tuần 8:** [Database Services, ETL (Kinesis/Glue/Athena), DMS Migration.](1.8-week8/)
 
-**Tuần 9:** [Workshop – Thiết kế kiến trúc hệ thống trên AWS (Architecture Design).](1.9-week9/)
+**Tuần 9:** [Thiết kế kiến trúc Serverless tổng thể: API Gateway, Lambda, DynamoDB, CloudFront, WAF, Cognito, CI/CD Pipeline..](1.9-week9/)
 
-**Tuần 10:** [Workshop – Xây dựng Database + Backend + Frontend.](1.10-week10/)
+**Tuần 10:** [Xây dựng Backend, DynamoDB Local và tích hợp Frontend ban đầu.](1.10-week10/)
 
-**Tuần 11:** [Workshop – Hoàn thiện FE + Deploy toàn bộ hệ thống.](1.11-week11/)
+**Tuần 11:** [Hoàn thiện UI, tích hợp API và chuẩn bị cho quá trình deploy.](1.11-week11/)
 
-**Tuần 12:** [Workshop – Kiểm tra, test, tối ưu & viết báo cáo tổng hợp.](1.12-week12/)
+**Tuần 12:** [Học AWS Console, AWS CLI, IAM, EC2 và các khái niệm cloud cần thiết để chuẩn bị deploy hệ thống.](1.12-week12/)

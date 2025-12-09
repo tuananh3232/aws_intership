@@ -21,19 +21,20 @@ pre: " <b> 1.4. </b> "
 | 3   | - **Hands-on:** <br>&emsp; + Create EC2 instances in multiple VPCs and configure routing <br>&emsp; + Verify NACLs and Security Groups when using peering <br>&emsp; + Finalize the peering setup                 | 30/09/2025 | 30/09/2025 | <https://000019.awsstudygroup.com> |
 | 4   | - Learn about Transit Gateway <br> - **Hands-on:** <br>&emsp; + Deploy a TGW <br>&emsp; + Set up routing between VPCs and the TGW                                                                                 | 01/10/2025 | 01/10/2025 | <https://000020.awsstudygroup.com> |
 | 5   | - **Hands-on:** <br>&emsp; + Create a Transit Gateway connection <br>&emsp; + Create a TGW Route Table <br>&emsp; + Map VPC routes to the TGW <br>&emsp; + Final connectivity check between multiple VPCs via TGW | 02/10/2025 | 02/10/2025 | <https://000020.awsstudygroup.com> |
-| 6   | - Clean up all lab resources <br> - Consolidate knowledge of Peering and Transit Gateway                                                                                                                          | 03/10/2025 | 03/10/2025 | <https://000020.awsstudygroup.com> |
+|     | - Clean up all lab resources <br> - Consolidate knowledge of Peering and Transit Gateway                                                                                                                          | 02/10/2025 | 02/10/2025 | <https://000020.awsstudygroup.com> |
+| 6   |                                                                                                                                                                                                                   | 03/10/2025 | 03/10/2025 |                                    |
 
 ### Week 4 Achievements:
 
 * **Summary:**  
-  * This week I explored multi-VPC connectivity models such as VPC Peering and Transit Gateway. I learned how inter-VPC networking works, how routing is handled via TGW, and how each component operates in a multi-VPC architecture.
+  * During this week, I explored different models for connecting multiple VPCs, including VPC Peering and Transit Gateway. I gained a clear understanding of how inter-VPC networking works, how routing is performed through TGW, and how each component functions within a multi-VPC architecture.
 
 * **Theory learned:**  
-  * How VPC Peering works and the routing mechanics between two VPCs  
-  * Transit Gateway and its hub-and-spoke connectivity model  
-  * How to configure VPC route tables when connecting through Peering or TGW  
+  * How VPC Peering operates and how routing is handled between two VPCs.
+  * The architecture and capabilities of Transit Gateway (TGW) for connecting multiple VPCs in a hub-and-spoke topology
+  * How to configure route tables in VPCs connected via Peering or Transit Gateway.
 
 * **Hands-on labs:**  
-  * Create VPC Peering connections and update route tables  
-  * Configure Transit Gateway, create attachments (TGW connections), and set up routing  
-  * Verify connectivity between subnets/VPCs after configuration  
+  * Created VPC Peering connections and updated route tables to enable traffic between VPCs.
+  * Configured a Transit Gateway, created TGW attachments, and set up routing between connected networks.
+  *Tested connectivity across subnets and VPCs to validate the configuration.
