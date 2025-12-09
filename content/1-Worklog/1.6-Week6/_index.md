@@ -1,57 +1,39 @@
 ---
 title: "Week 6 Worklog"
-date: "`r Sys.Date()`"
-weight: 1
+date: "2025-10-17"
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn the overview of AWS storage services (S3, Glacier, Backup, Storage Gateway, Snow Family).
+* Understand how S3 works: access point, storage class, CORS, static website hosting.
+* Practice the entire workflow with S3, Backup, Storage Gateway, and File Systems.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Start Date | End Date   | Reference                                                                                                                                                                                                                              |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | - Learn the overview of AWS storage services: S3, EBS, Backup, Storage Gateway, Snow Family <br> - Study Access Point, Storage Class, and data access models <br> - Understand S3 static website, CORS, Object key, Glacier                                                                                                                                                                                                                                                                                                                           | 13/10/2025 | 13/10/2025 | <https://youtu.be/hsCfP0IxoaM?si=O3vMWs7Trr1fugJD> <br><br> <https://youtu.be/_yunukwcAwc?si=ZhkTKr-_OkyUNImI> <br><br> <https://youtu.be/mPBjB6Ltl_Q?si=qs6j0n7AeD2Mxwbz> <br><br> <https://youtu.be/YXn8Q_Hpsu4?si=XojTnkR_LLC1KwEv> |
+| 3   | **Hands-on:** <br>&emsp; + Create S3 bucket <br>&emsp; + Deploy backup infrastructure <br>&emsp; + Create backup plan and set notification <br>&emsp; + Test restore & clean up backup resources                                                                                                                                                                                                                                                                                                                                                      | 14/10/2025 | 14/10/2025 | <https://000013.awsstudygroup.com>                                                                                                                                                                                                     |
+| 4   | - Learn VMware Workstation <br> - **Hands-on:** <br>&emsp; + Export VM from on-prem <br>&emsp; + Upload VM to AWS <br>&emsp; + Import as EC2 <br>&emsp; + Export back as AMI <br>&emsp; + Clean up import/export environment                                                                                                                                                                                                                                                                                                                          | 15/10/2025 | 15/10/2025 | <https://000014.awsstudygroup.com>                                                                                                                                                                                                     |
+| 5   | - **Hands-on:** <br>&emsp; + Create Storage Gateway <br>&emsp; + Create advanced File Share <br>&emsp; + Connect File Share from on-prem machine <br>&emsp; + Clean up Storage Gateway + File Shares                                                                                                                                                                                                                                                                                                                                                  | 16/10/2025 | 16/10/2025 | <https://000024.awsstudygroup.com>                                                                                                                                                                                                     |
+| 6   | - **Hands-on (lab25):** <br>&emsp; + Create FSx file system (SSD/HDD, Multi-AZ) <br>&emsp; + Create & configure file shares <br>&emsp; + Test & monitor performance <br>&emsp; + Manage user sessions + quotas <br> - **Hands-on (lab57):** <br>&emsp; + Create bucket, upload data, enable static website <br>&emsp; + Configure public access + object permissions <br>&emsp; + Create & configure CloudFront distribution <br>&emsp; + Enable versioning & object replication <br> - Clean up environment (lab25), bucket, CloudFront, replication | 17/10/2025 | 17/10/2025 | <https://000025.awsstudygroup.com> <br><br> <https://000057.awsstudygroup.com>                                                                                                                                                         |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* **Summary:**  
+  * This week I learned the AWS storage ecosystem including S3, Glacier, Backup, Storage Gateway, and file systems. I focused heavily on hands-on labs to understand data management, backup–restore, and AWS storage mechanisms.
 
-* Successfully created and configured an AWS Free Tier account.
+* **Theory learned:**  
+  * S3 Storage Class, Access Point, CORS  
+  * Glacier, lifecycle, backup concepts  
+  * Storage Gateway and file system architecture  
+  * VM import/export  
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* **Hands-on labs:**  
+  * Backup & restore  
+  * Import on-prem VM into AWS  
+  * Create Multi-AZ file system  
+  * Create static website, CloudFront, versioning, replication  
+  * Practice Storage Gateway – create file share, connect, test data transfer between on-prem and AWS  

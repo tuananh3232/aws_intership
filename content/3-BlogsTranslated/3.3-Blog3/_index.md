@@ -1,126 +1,115 @@
 ---
 title: "Blog 3"
-date: "`r Sys.Date()`"
+date: "2025-11-10"
 weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+# Amazon OpenSearch Serverless: Cost-Effective Search at Any Scale
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+**Authors:** Satish Nandi and Jon Handler  
+**Published:** August 2, 2024  
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+**Categories:**  
+[Amazon OpenSearch Service](https://aws.amazon.com/opensearch-service/),  
+[Announcements](https://aws.amazon.com/blogs/big-data/category/post-types/announcements/),  
+[AWS Big Data](https://aws.amazon.com/blogs/big-data/category/big-data/),  
+[Foundational (100)](https://aws.amazon.com/blogs/big-data/category/learning-levels/foundational-100/),  
+[Price Reduction](https://aws.amazon.com/blogs/big-data/category/price-reduction/)
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+We are excited to announce a lower entry-level cost for **[Amazon OpenSearch Serverless](https://aws.amazon.com/opensearch-service/features/serverless/)**. With support for half (0.5) OpenSearch Compute Units (OCUs) for indexing and search workloads, the entry cost has been reduced by 50%. OpenSearch Serverless is a serverless deployment option for Amazon OpenSearch Service that allows you to run search and analytics workloads without managing infrastructure, shard tuning, or data lifecycle management. It automatically provisions and scales compute resources to provide consistent ingestion performance and millisecond-level query response times—even as your application usage patterns and requirements change.
 
----
+OpenSearch Serverless provides three collection types to meet your needs: **time-series**, **search**, and **vector**. The new lower entry cost benefits all collection types. Vector collections, in particular, have emerged as the dominant workload when using OpenSearch Serverless as a knowledge base for **[Amazon Bedrock](https://aws.amazon.com/bedrock/)**. By introducing the 0.5 OCU baseline, the cost of small vector workloads is reduced by half. Time-series and search collections also benefit, especially for small workloads such as proof-of-concept (PoC) deployments and development/test environments.
 
-## Architecture Guidance
+A full OCU consists of 1 vCPU, 6 GB RAM, and 120 GB of storage. A half OCU provides 0.5 vCPU, 3 GB RAM, and 60 GB storage. OpenSearch Serverless scales from the first half OCU to a full OCU, then continues scaling in increments of one full OCU. Each OCU also uses Amazon Simple Storage Service (Amazon S3) as its backing store; you pay for S3 storage regardless of OCU size. The number of OCUs required depends on your collection type and your ingestion and search workloads. We will go deeper into these details and compare how the new 0.5 OCU baseline delivers cost benefits.
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
+OpenSearch Serverless separates compute resources for indexing and search, deploying distinct sets of OCUs for each compute need. You can deploy OpenSearch Serverless in two ways:  
+1) **Redundant deployment** for production, and  
+2) **Non-redundant deployment** for development or testing.
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
-
-**The solution architecture is now as follows:**
-
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
-
----
-
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
-
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+> Note: Redundant deployments provision twice the compute resources for both indexing and search operations.
 
 ---
 
-## Technology Choices and Communication Scope
+## Deployment Types in OpenSearch Serverless
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+The diagram below illustrates the architecture of OpenSearch Serverless in redundant mode.
 
----
+![]()
 
-## The Pub/Sub Hub
+In redundant mode, OpenSearch Serverless deploys two base OCUs for each compute group (indexing and search) across two Availability Zones. For small workloads under 60 GB, OpenSearch Serverless uses a half OCU as the baseline size. The minimum deployment equals four base units—two for indexing and two for search. This corresponds to approximately **$350 per month** (four half OCUs). All pricing is based on the US-East (N. Virginia) Region and assumes a 30-day month. Under normal operation, all OCUs actively serve traffic, and OpenSearch Serverless scales from this baseline as needed.
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+For **non-redundant deployments**, OpenSearch Serverless deploys a single base OCU for each compute group, costing approximately **$174 per month** (two half OCUs).
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+Redundant deployments are recommended for production to ensure high availability. If an Availability Zone fails, the remaining zone can still serve traffic. Non-redundant deployments are suitable for development and testing environments to reduce cost. In both configurations, you can set an upper limit on OCU usage to control costs. The system will scale up to—but never beyond—this limit during peak usage.
 
 ---
 
-## Core Microservice
+## Collections in OpenSearch Serverless and Resource Allocation
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
+OpenSearch Serverless uses OCUs differently depending on your collection type and stores your data in Amazon S3. When ingesting data, the service writes to both local OCU disk and Amazon S3 before acknowledging the request, ensuring durability and performance. Depending on the collection type, it also stores data in local OCU storage and scales as needed.
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+**Time-series collections** are designed for cost efficiency by limiting how much data is stored locally while offloading older data to Amazon S3. The required number of OCUs depends on data volume and retention period. The system uses whichever is greater: the default minimum OCUs or the minimum OCUs required to store the most recent data per the **[OpenSearch Serverless data lifecycle policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-lifecycle.html)**.
 
----
+Example:  
+If you ingest **1 TiB per day** and have a **30-day retention period**, the “recent data size” is 1 TiB. You would need:  
+- **20 OCUs** for indexing (10 OCUs × 2 for redundancy)  
+- **20 OCUs** for search (10 OCUs × 2)
 
-## Front Door Microservice
+(Each OCU provides 120 GiB of local disk storage.)  
+Querying older data stored only in S3 will increase query latency. This is the trade-off between cost efficiency and older data retrieval times.
 
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
+**Vector collections** use RAM to store vector graphs and disk to store indexes. Vector collections keep index data in local OCU memory. RAM limits are reached faster than disk limits, making vector workloads RAM-bound.
 
----
+When using a full OCU, resource allocation typically includes:  
+- **2 GB** for the operating system  
+- **2 GB** for Java heap  
+- **2 GB** for vector graph memory  
+- **120 GB** of local disk for OpenSearch indexes
 
-## Staging ER7 Microservice
+RAM requirements for a vector graph depend on vector dimensionality, vector count, and the algorithm chosen. Refer to **“Choose the k-NN algorithm for your billion-scale use case with OpenSearch”** for formulas and guidelines.
 
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
+> Note: System behavior described here reflects the state as of June 2024. Ongoing improvements may further reduce costs.
 
 ---
 
-## New Features in the Solution
+## Supported AWS Regions
 
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+The new minimum OCU size (0.5 OCU) is available in all AWS Regions where OpenSearch Serverless is supported.  
+See the **[AWS Regional Services List](https://docs.aws.amazon.com/general/latest/gr/opensearch-service.html#opensearch-service-regions)** for service availability details and documentation to **learn more about OpenSearch Serverless**.
+
+---
+
+## Conclusion
+
+The introduction of 0.5 OCUs significantly reduces the baseline cost of Amazon OpenSearch Serverless. If you have small datasets or light workloads, you can now operate at a much lower cost. Combined with its simplicity and ability to handle search and analytics workloads without infrastructure management, OpenSearch Serverless provides seamless operations even as your traffic and usage patterns evolve.
+
+---
+
+## About the Authors
+
+<div style="display:flex;align-items:center;gap:20px;border:1px solid #e0e0e0;border-radius:8px;padding:16px;background-color:#fff;max-width:900px;">
+
+  <img src="/images/blog2/Satish_Nandi.png" alt="Satish Nandi" style="width:120px;height:auto;border-radius:6px;object-fit:cover;">
+
+  <div style="flex:1;">
+    <p style="margin:0;">
+      <strong style="font-size:1.1rem;color:#0d1b2a;">Satish Nandi</strong><br>
+      Satish Nandi is a Senior Product Manager for Amazon OpenSearch Service, focusing on OpenSearch Serverless and Geospatial. He has years of experience in computer networking, security, Machine Learning (ML), and Artificial Intelligence (AI). He holds a BEng in Computer Science and an MBA in Entrepreneurship. In his free time, he enjoys flying airplanes, paragliding, and motorcycling.
+    </p>
+  </div>
+
+</div>
+
+<div style="display:flex;align-items:center;gap:20px;border:1px solid #e0e0e0;border-radius:8px;padding:16px;background-color:#fff;max-width:900px;">
+
+  <img src="/images/blog2/Jon_Handler.png" alt="Jon Handler" style="width:120px;height:auto;border-radius:6px;object-fit:cover;">
+
+  <div style="flex:1;">
+    <p style="margin:0;">
+      <strong style="font-size:1.1rem;color:#0d1b2a;">Jon Handler</strong><br>
+      Jon Handler is a Senior Solutions Architect at AWS. He supports Capital Markets and FinTech customers in their cloud transformation journeys. His areas of expertise include identity management, security, and unified communication systems.
+    </p>
+  </div>
+
+</div>

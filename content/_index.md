@@ -1,6 +1,6 @@
 ---
 title: "Internship Report"
-date: "`r Sys.Date()`"
+date: "2025-11-10T00:00:00+07:00"
 weight: 1
 chapter: false
 ---
@@ -8,33 +8,28 @@ chapter: false
     
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Nghiêm Tuấn Anh
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0906872175 
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** anhntse183220@fpt.edu.vn
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** FPT University
 
-&emsp; **Major:** Information Technology
+&emsp; **Major:** Software Engineering
 
-&emsp; **Class:** AWS082025
+&emsp; **Class:** AWS092025
 
-&emsp; **Internship Company:** Amazon Web Services Vietnam Co., Ltd.
+&emsp; **Internship Company:** AMAZON WEB SERVICES VIETNAM COMPANY LIMITED
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 8/09/2025 to 09/12/2025
 
-![Your profile picture](/images/avatar.png)
+![Your profile picture](/images/6-Self-evaluation/Avatar.png)
 
 ### Report Content
-
 1.  [Worklog](1-Worklog/)
 2.  [Proposal](2-Proposal/)
 3.  [Translated Blogs](3-BlogsTranslated/)
@@ -42,3 +37,6 @@ chapter: false
 5.  [Workshop](5-Workshop/)
 6.  [Self-evaluation](6-Self-evaluation/)
 7.  [Sharing and Feedback](7-Feedback/)
+
+ 
+ 
