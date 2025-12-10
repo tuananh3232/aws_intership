@@ -26,7 +26,8 @@ chapter: false
 
 &emsp; **Internship Duration:** From 8/09/2025 to 09/12/2025
 
-![picture](images/Avatar.png)
+![picture](images/TuanAnh.png)
+
 
 ### Report Content
 1.  [Worklog](1-Worklog/)

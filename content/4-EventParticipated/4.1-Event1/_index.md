@@ -174,6 +174,4 @@ Keynotes from AWS executives and business leaders helped me better understand ho
 ---
 
 #### Event Images
-![Event photo](/images/4-EventParticipated/4.1-Event1/event1.png)
-![Event photo](static/images/4-EventParticipated/event1.png)
-![Event photo](images/4-EventParticipated/event1.png)
+![Event photo](images/4-EventParticipated/4.1-Event1/event1.png)
