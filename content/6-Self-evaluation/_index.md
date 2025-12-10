@@ -13,8 +13,8 @@ Regarding work ethic, I consistently strived to complete assigned tasks, complie
 
 To objectively reflect on my internship experience, I provide the following self-evaluation:
 
-| No. | Criteria                                  | Description                                                                                | Good | Fair | Average |
-| --- | ----------------------------------------- | ------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
+| No. | Criteria                                  | Description                                                                                | Good | Fair | Average ---|
+| --- | ----------------------------------------- | ------------------------------------------------------------------------------------------ | ---- | ---- | ------- ---|
 | 1   | **Professional knowledge & skills**       | Understanding of the field, applying knowledge in practice, tool proficiency, work quality | ☐    | ✅    | ☐       |
 | 2   | **Ability to learn**                      | Ability to absorb new knowledge and learn quickly                                          | ☐    | ✅    | ☐       |
 | 3   | **Proactiveness**                         | Self-learning, taking on tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
