@@ -5,7 +5,8 @@ weight: 2
 chapter: false 
 pre: " <b> 2. </b> "
 ---
-**[Proposal Template Taskhub](static/files/Proposal_Template_Taskhub.docx)**
+**[Proposal Template Taskhub](files/Proposal_Template_Taskhub.docx)**
+**[Proposal Template Taskhub](https://docs.google.com/document/d/14wEgjSuUkQs6SSVXwNQr4wmjwORjntfDizzC4zmPZIY/edit?usp=sharing)**
 
 # TaskHub - Task and Progress Management Platform following the DevSecOps Model on AWS
 

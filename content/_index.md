@@ -26,7 +26,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 8/09/2025 to 09/12/2025
 
-![picture](images/TuanAnh.png)
+![picture](/images/TuanAnh.png)
 
 
 ### Report Content
