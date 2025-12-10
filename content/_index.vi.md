@@ -1,6 +1,6 @@
 ---
 title: "Báo cáo thực tập"
-date: "2025-11-10"
+date: "2025-11-10T00:00:00+07:00"
 weight: 1
 chapter: false
 ---
@@ -26,7 +26,8 @@ chapter: false
 &emsp; **Thời gian thực tập:** Từ ngày 8/09/2025 đến ngày 09/12/2025
 
 ![picture](/images/TuanAnh.png)
-![picture](images/TuanAnh.png)
+![picture](/images/TuanAnh.png)
+
 ### Nội dung báo cáo    
 
 1.  [Worklog](1-Worklog/)

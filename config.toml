@@ -1,8 +1,8 @@
 baseURL = "https://tuananh3232.github.io/aws_intership/"
-# baseURL = "https://workshop-sample.fcjuni.com/"
-relativeURLs = false
-canonifyURLs = false
-defaultContentLanguage = "en"
+
+relativeURLs = true
+canonifyURLs = true
+# defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
