@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-### Mục tiêu tuần 11 (Góc nhìn DevOps)
+### Mục tiêu tuần 11
 
 - Hỗ trợ nhóm hoàn thiện việc tích hợp FE–BE và đảm bảo API contract thống nhất trên toàn hệ thống.
 - Thực hiện kiểm thử end-to-end từ FE → API Gateway (local mock) → Backend để đánh giá mức độ sẵn sàng trước khi deploy lên AWS.

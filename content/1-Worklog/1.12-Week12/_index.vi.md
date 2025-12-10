@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.12. </b> "
 ---
 
-### Mục tiêu tuần 12 (Nền tảng DevOps trước khi triển khai AWS)
+### Mục tiêu tuần 12
 
 Sau khi hoàn thành backend local ở tuần 10 và tích hợp FE–BE ở tuần 11,  
 tuần 12 tập trung xây dựng kiến thức nền tảng AWS để chuẩn bị cho các tuần triển khai thực tế (Lambda, API Gateway, DynamoDB, CloudFront).

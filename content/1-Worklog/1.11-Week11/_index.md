@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-### Week 11 Objectives (DevOps Focus)
+### Week 11 Objectives
 
 - Support the team in completing FE–BE integration and ensure API contracts are consistent across environments.
 - Perform end-to-end testing from FE → API Gateway (local mock) → Backend to verify system readiness before cloud deployment.

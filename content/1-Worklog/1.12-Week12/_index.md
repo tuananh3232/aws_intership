@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 1.12. </b> "
 ---
 
-### Week 12 Objectives (DevOps Foundation Before Deployment)
+### Week 12 Objectives
 
 After completing local backend development in Week 10 and FE–BE integration in Week 11,  
 Week 12 focuses on building the AWS foundation required for the upcoming cloud deployment (Lambda, API Gateway, DynamoDB, CloudFront).

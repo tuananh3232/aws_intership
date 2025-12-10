@@ -25,9 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 8/09/2025 đến ngày 09/12/2025
 
-![picture](/images/1-Worklog/Avatar.png)
-
-
+![picture](images/Avatar.png)
 ### Nội dung báo cáo
 
 1.  [Worklog](1-Worklog/)
