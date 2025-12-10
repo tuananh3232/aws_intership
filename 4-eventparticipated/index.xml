@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Events Participated on Internship Report</title><link>https://tuananh3232.github.io/aws_intership/4-eventparticipated/</link><description>Recent content in Events Participated on Internship Report</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sun, 16 Nov 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://tuananh3232.github.io/aws_intership/4-eventparticipated/index.xml" rel="self" type="application/rss+xml"/><item><title>Event 3</title><link>https://tuananh3232.github.io/aws_intership/4-eventparticipated/4.3-event3/_.index/</link><pubDate>Sun, 16 Nov 2025 00:00:00 +0000</pubDate><guid>https://tuananh3232.github.io/aws_intership/4-eventparticipated/4.3-event3/_.index/</guid><description>&lt;h1 id="summary-report-aws-cloud-mastery-series-1-aimlgenai-on-aws">Summary Report: &amp;ldquo;AWS Cloud Mastery Series #1: AI/ML/GenAI on AWS&amp;rdquo;&lt;/h1>
+&lt;h3 id="purpose-of-the-workshop">Purpose of the Workshop&lt;/h3>
+&lt;ul>
+&lt;li>Provide an overview of the AI/ML/GenAI ecosystem on AWS, focusing on the most important services.&lt;/li>
+&lt;li>Equip attendees with practical knowledge of the AI/ML workflow—from data preparation to model training and deployment using Amazon SageMaker.&lt;/li>
+&lt;li>Introduce the application of Generative AI with Amazon Bedrock, including prompt engineering, RAG, and building automation agents.&lt;/li>
+&lt;li>Create an environment for students and developers to connect and exchange real-world AI/ML experience on the cloud.&lt;/li>
+&lt;/ul>
+&lt;h3 id="speakers--instructors-according-to-the-workshop-program">Speakers / Instructors (According to the workshop program)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Nguyễn Gia Hưng&lt;/strong> – Head of Solutions Architect, AWS Vietnam&lt;/li>
+&lt;li>&lt;strong>Trần Thị Minh Anh&lt;/strong> – Senior AI/ML Specialist Solutions Architect, AWS&lt;/li>
+&lt;li>&lt;strong>Lê Quang Huy&lt;/strong> – Cloud Engineer &amp;amp; AI Enthusiast&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="key-content--learnings">Key Content &amp;amp; Learnings&lt;/h3>
+&lt;h4 id="1-overview-of-aws-aimlgenai-ecosystem">1. Overview of AWS AI/ML/GenAI Ecosystem&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>Vietnam landscape&lt;/strong>: AI adoption is growing rapidly; demand for AI/ML and cloud-skilled engineers continues to rise.&lt;/li>
+&lt;li>&lt;strong>Learning roadmap&lt;/strong>: From foundational courses to advanced certifications, emphasizing hands-on practice.&lt;/li>
+&lt;li>&lt;strong>Three service groups&lt;/strong>: AI Services (ready-to-use), ML Services (customizable), and Generative AI (opening new possibilities).&lt;/li>
+&lt;/ul>
+&lt;h4 id="2-amazon-sagemaker--a-complete-ml-platform">2. Amazon SageMaker – A Complete ML Platform&lt;/h4>
+&lt;ul>
+&lt;li>Supports the entire ML lifecycle in a single platform.&lt;/li>
+&lt;li>&lt;strong>SageMaker Studio&lt;/strong> provides an integrated development environment that accelerates model development.&lt;/li>
+&lt;li>Enables MLOps, training automation, hyperparameter tuning, and model deployment.&lt;/li>
+&lt;/ul>
+&lt;h4 id="3-generative-ai-with-amazon-bedrock">3. Generative AI with Amazon Bedrock&lt;/h4>
+&lt;ul>
+&lt;li>Offers multiple Foundation Models such as Claude, Llama, and Titan for different tasks.&lt;/li>
+&lt;li>&lt;strong>Advanced Prompt Engineering&lt;/strong>: using Chain-of-Thought, few-shot techniques for improved output quality.&lt;/li>
+&lt;li>&lt;strong>RAG (Retrieval-Augmented Generation)&lt;/strong>: combines LLMs with private data to reduce hallucination and expand knowledge scope.&lt;/li>
+&lt;li>&lt;strong>Bedrock Agents&lt;/strong>: enable models to perform multi-step tasks and interact with external systems.&lt;/li>
+&lt;li>&lt;strong>Guardrails&lt;/strong>: ensure safe content and compliance.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="key-takeaways">Key Takeaways&lt;/h3>
+&lt;h4 id="technology-insights">Technology Insights&lt;/h4>
+&lt;ul>
+&lt;li>SageMaker is not just a training tool but a comprehensive ML lifecycle management platform.&lt;/li>
+&lt;li>Effective Generative AI relies on the combination of models, prompt techniques, and supporting architectures like RAG.&lt;/li>
+&lt;li>Data remains the most critical factor influencing model quality.&lt;/li>
+&lt;/ul>
+&lt;h4 id="mindset--methodology">Mindset &amp;amp; Methodology&lt;/h4>
+&lt;ul>
+&lt;li>Start with real-world problems instead of chasing technology trends.&lt;/li>
+&lt;li>Apply an iterative approach: fast prototyping → gather feedback → improve.&lt;/li>
+&lt;li>Always evaluate cost to ensure project feasibility.&lt;/li>
+&lt;/ul>
+&lt;h4 id="practical-skills">Practical Skills&lt;/h4>
+&lt;ul>
+&lt;li>Prompt engineering requires continuous practice.&lt;/li>
+&lt;li>Proficiency in AWS Console/SDK is essential for building real-world AI products.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="personal-action-plan-after-the-workshop">Personal Action Plan After the Workshop&lt;/h3>
+&lt;ol>
+&lt;li>&lt;strong>Practice using AWS Free Tier&lt;/strong> — start with SageMaker Studio Lab to explore ML workflows.&lt;/li>
+&lt;li>&lt;strong>Build a first GenAI application&lt;/strong> — for example, creating a simple chatbot using Amazon Bedrock.&lt;/li>
+&lt;li>&lt;strong>Deepen learning through AWS Skill Builder&lt;/strong> — complete learning paths for ML and Generative AI.&lt;/li>
+&lt;li>&lt;strong>Join Vietnam AI/ML communities&lt;/strong> to stay updated with case studies and hands-on knowledge.&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h3 id="personal-experience-at-the-event">Personal Experience at the Event&lt;/h3>
+&lt;p>The “AI/ML/GenAI on AWS” workshop provided a clearer and more practical perspective on how to approach AI in a professional direction. The modern AWS office environment, the enthusiasm of the speakers, and their easy-to-understand explanations made the content very engaging.&lt;/p></description></item></channel></rss>
